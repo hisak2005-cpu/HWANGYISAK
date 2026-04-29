@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전기안전 가이드 | 올바른 사용 습관</title>
+    <style>
+        :root {
+            --accent-color: #2e7d32; /* 딥 그린 */
+            --bg-soft: #f0f4f1;
+            --text-main: #2c3e50;
+        }
+
+        body {
+            font-family: 'Pretendard', sans-serif;
+            background-color: var(--bg-soft);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* 히어로 섹션: 곡선 디자인 */
+        .hero {
+            background: var(--accent-color);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom-left-radius: 50% 20px;
+            border-bottom-right-radius: 50% 20px;
+        }
+
+        .hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
+
+        .main-content {
+            max-width: 850px;
+            margin: -40px auto 60px;
+            padding: 0 20px;
+        }
+
+        /* 유리창 효과(Glassmorphism) 카드 */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        /* 강조 리스트 스타일 */
+        .check-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .check-list li {
+            padding: 15px;
+            margin-bottom: 10px;
+            background: #fff;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .check-list li::before {
+            content: '⚠️';
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+
+        /* 2x2 그리드의 변형: 지그재그 배치 */
+        .step-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .step-item {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            border-bottom: 5px solid #ddd;
+            transition: all 0.3s ease;
+        }
+
+        .step-item:nth-child(odd) { border-bottom-color: var(--accent-color); }
+        .step-item:nth-child(even) { border-bottom-color: #81c784; }
+
+        .step-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .step-tag {
+            background: var(--accent-color);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .comparison {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+        }
+
+        .bad { color: #d32f2f; font-weight: bold; }
+        .good { color: #2e7d32; font-weight: bold; }
+
+        /* --- 추가된 영상 버튼 스타일 --- */
+        .video-btn-container {
+            margin-top: 40px;
+        }
+
+        .usage-video-btn {
+            display: block;
+            background: var(--accent-color);
+            color: white;
+            padding: 25px;
+            border-radius: 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: 0.3s;
+            box-shadow: 0 8px 16px rgba(46, 125, 50, 0.2);
+        }
+
+        .usage-video-btn:hover {
+            background: #1b5e20; /* 더 깊은 그린 */
+            transform: translateY(-3px);
+            box-shadow: 0 12px 24px rgba(46, 125, 50, 0.3);
+        }
+
+        /* 하단 전문가 조언: 인용구 스타일 */
+        .expert-quote {
+            border-left: 8px solid var(--accent-color);
+            padding: 30px;
+            background: white;
+            font-style: italic;
+            border-radius: 0 20px 20px 0;
+            margin-top: 40px;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 40px;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 700px) {
+            .step-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <h1>🛠️ 올바른 사용법 상세 가이드</h1>
+    <p>사소한 습관이 당신의 안전을 결정합니다.</p>
+</div>
+
+<div class="main-content">
+    <section class="glass-card">
+        <h2 style="color: var(--accent-color);">01. 위험 신호 포착</h2>
+        <p>기기가 보내는 작은 경고를 무시하지 마세요. 사고는 항상 예고 없이 찾아오지 않습니다.</p>
+        <ul class="check-list">
+            <li>전선이나 멀티탭 부근에서 탄 냄새가 날 때</li>
+            <li>플러그 연결부가 검게 그을려 있을 때</li>
+            <li>가전제품 외벽에 손을 대면 찌릿한 느낌이 들 때</li>
+        </ul>
+    </section>
+
+    <h2 style="text-align: center; margin-top: 60px;">02. 4가지 핵심 안전 수칙</h2>
+    <div class="step-container">
+        <div class="step-item">
+            <span class="step-tag">STEP 1</span>
+            <h3>밀착 삽입</h3>
+            <p>플러그와 콘센트 사이에 틈이 생기면 열이 발생합니다.</p>
+            <div class="comparison">
+                <span class="bad">❌ 헐거운 연결</span> | <span class="good">⭕ 끝까지 밀착</span>
+            </div>
+        </div>
+
+        <div class="step-item">
+            <span class="step-tag">STEP 2</span>
+            <h3>미사용 차단</h3>
+            <p>전원을 끄는 것보다 플러그를 뽑는 것이 더 안전합니다.</p>
+            <div class="comparison">
+                <span class="bad">❌ 상시 전원 연결</span> | <span class="good">⭕ 플러그 분리</span>
+            </div>
+        </div>
+
+        <div class="step-item">
+            <span class="step-tag">STEP 3</span>
+            <h3>인증 제품</h3>
+            <p>가격보다 중요한 것은 당신의 안전입니다.</p>
+            <div class="comparison">
+                <span class="bad">❌ 미인증 저가제품</span> | <span class="good">⭕ KC 인증 마크 확인</span>
+            </div>
+        </div>
+
+        <div class="step-item">
+            <span class="step-tag">STEP 4</span>
+            <h3>통풍 확보</h3>
+            <p>열이 방출되지 않으면 기기 내부 부품이 녹을 수 있습니다.</p>
+            <div class="comparison">
+                <span class="bad">❌ 덮개로 가리기</span> | <span class="good">⭕ 개방형 장소 배치</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-btn-container">
+        <a href="0000.mp4" class="usage-video-btn">
+            🎬 전기기구 오사용 화재 실험 영상 보기
+        </a>
+    </div>
+
+    <div class="expert-quote">
+        <h3 style="margin-top: 0; font-style: normal; color: var(--accent-color);">Expert Advice</h3>
+        "전기 화재는 눈에 보이지 않는 곳에서 서서히 진행됩니다. 특히 어댑터나 전자기기 위에 수건이나 옷을 올려두는 습관은 열 배출을 막아 매우 위험합니다. 기기 주변은 항상 비워두고, 타는 냄새가 난다면 즉시 메인 차단기를 내리는 것이 최선의 방어입니다."
+    </div>
+
+    <a href="2.html" class="back-link">← 메인 페이지로 돌아가기</a>
+</div>
+
+<footer>
+    <p style="text-align: center; color: #999; padding: 40px 0;">© 2026 전기안전 캠페인 리뉴얼 가이드</p>
+</footer>
+
+</body>
+</html>

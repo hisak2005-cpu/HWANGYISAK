@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비상 대처 가이드 | 전기안전</title>
+    <style>
+        :root {
+            --emergency-red: #d93025;
+            --caution-yellow: #f9ab00;
+            --dark-gray: #202124;
+            --light-bg: #fdfdfd;
+        }
+
+        body {
+            font-family: 'Pretendard', sans-serif;
+            background-color: var(--light-bg);
+            margin: 0;
+            line-height: 1.7;
+            color: var(--dark-gray);
+        }
+
+        /* 긴급 상황 헤더 */
+        .emergency-header {
+            background: var(--emergency-red);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 10px solid var(--caution-yellow);
+        }
+
+        .emergency-header h1 { margin: 0; font-size: 2.2rem; }
+        .emergency-header p { opacity: 0.9; margin-top: 10px; font-weight: bold; }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* 단계별 레이아웃 */
+        .step-container {
+            margin-bottom: 30px;
+            display: flex;
+            gap: 20px;
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+        }
+
+        .step-num {
+            background: var(--dark-gray);
+            color: var(--caution-yellow);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 900;
+            flex-shrink: 0;
+        }
+
+        .step-content h2 { margin: 0 0 10px 0; font-size: 1.4rem; color: var(--emergency-red); }
+        .step-content p { margin: 0; color: #555; }
+
+        /* 행동 강령 강조 */
+        .action-point {
+            background: #fff4f4;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 15px;
+            border: 1px dashed var(--emergency-red);
+        }
+
+        .action-point strong { color: var(--emergency-red); }
+
+        /* 119/112 강조 박스 */
+        .call-box {
+            background: var(--dark-gray);
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .call-number {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--caution-yellow);
+            display: block;
+            margin: 10px 0;
+        }
+
+        .btn-back {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 12px 40px;
+            background: var(--dark-gray);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-back:hover { background: var(--emergency-red); }
+
+        @media (max-width: 600px) {
+            .step-container { flex-direction: column; text-align: center; }
+            .step-num { margin: 0 auto; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="emergency-header">
+    <h1>🚨 비상 시 응급처치 및 대처</h1>
+    <p>감전 및 전기 화재 시 골든타임 사수 가이드</p>
+</div>
+
+<div class="container">
+    <div class="step-container">
+        <div class="step-num">1</div>
+        <div class="step-content">
+            <h2>전원 차단 (가장 우선)</h2>
+            <p>사고자를 직접 만지기 전에 반드시 메인 누전 차단기를 내리십시오.</p>
+            <div class="action-point">
+                📍 <strong>주의:</strong> 차단기 위치를 모를 경우, 절연체(마른 나무 막대, 플라스틱 빗자루 등)를 사용해 사고자를 전선에서 떼어놓으십시오.
+            </div>
+        </div>
+    </div>
+
+    <div class="step-container">
+        <div class="step-num">2</div>
+        <div class="step-content">
+            <h2>의식 확인 및 신고</h2>
+            <p>사고자를 안전한 곳으로 옮긴 후 의식과 호흡 상태를 확인합니다.</p>
+            <div class="action-point">
+                📍 <strong>주의:</strong> 환자가 의식이 없다면 즉시 주변 사람에게 119 신고와 AED(자동심장충격기)를 요청하십시오.
+            </div>
+        </div>
+    </div>
+
+    <div class="step-container">
+        <div class="step-num">3</div>
+        <div class="step-content">
+            <h2>심폐소생술(CPR) 실시</h2>
+            <p>호흡이 멎었을 경우 구급대원이 도착할 때까지 CPR을 멈추지 마십시오.</p>
+            <div class="action-point">
+                📍 <strong>방법:</strong> 가슴 중앙을 분당 100~120회 속도로 5~6cm 깊이로 강하게 압박하십시오.
+            </div>
+        </div>
+    </div>
+
+    <div class="step-container">
+        <div class="step-num">4</div>
+        <div class="step-content">
+            <h2>화상 부위 보호</h2>
+            <p>전기 화상은 외관보다 내부 손상이 심각할 수 있습니다.</p>
+            <div class="action-point">
+                📍 <strong>조치:</strong> 흐르는 찬물로 화상 부위를 식히되, 얼음이나 연고를 직접 바르지 말고 깨끗한 거즈로 보호하십시오.
+            </div>
+        </div>
+    </div>
+
+    <div class="call-box">
+        <h3>망설이지 말고 바로 신고하세요!</h3>
+        <span class="call-number">📞 119</span>
+        <p>전기 화재 및 인명 사고 발생 시</p>
+    </div>
+
+    <div style="text-align: center;">
+        <a href="2.html" class="btn-back">← 메인 페이지로 돌아가기</a>
+    </div>
+</div>
+
+<footer style="text-align: center; color: #999; font-size: 0.8rem; padding: 40px 0;">
+    Emergency Protocol Service © 2026 | Safe Life Save Life
+</footer>
+
+</body>
+</html>

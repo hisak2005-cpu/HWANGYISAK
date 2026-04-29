@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전기안전 가이드 | 배선 관리</title>
+    <style>
+        :root {
+            --primary: #ff6d00;
+            --secondary: #7c6a05;
+            --bg: #f4f7f9;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Pretendard', sans-serif;
+            background-color: var(--bg);
+            color: var(--secondary);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* 미니멀 헤더 */
+        .top-banner {
+            background: var(--secondary);
+            color: var(--white);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .top-banner h1 { margin: 0; font-size: 2rem; letter-spacing: -1px; }
+        .top-banner span { color: var(--primary); font-weight: bold; }
+
+        .wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* 경고 요약 카드 */
+        .warning-summary {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 50px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 5px solid var(--primary);
+        }
+
+        /* 세로형 스텝 레이아웃 */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            bottom: 10px;
+            width: 4px;
+            background: #dfe6e9;
+        }
+
+        .step-block {
+            position: relative;
+            margin-bottom: 40px;
+            background: var(--white);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        }
+
+        .step-block::after {
+            content: '';
+            position: absolute;
+            left: -35px;
+            top: 20px;
+            width: 14px;
+            height: 14px;
+            background: var(--primary);
+            border-radius: 50%;
+            border: 4px solid var(--bg);
+        }
+
+        /* 이미지 스타일 */
+        .step-visual {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 15px 0;
+            border: 1px solid #eee;
+            display: block;
+        }
+
+        /* 배지 그룹 */
+        .badge-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        .badge.no { background: #ffebee; color: #c62828; }
+        .badge.yes { background: #e8f5e9; color: #2e7d32; }
+
+        /* 동영상 통합 버튼 스타일 */
+        .video-btn-full {
+            display: block;
+            background: #fff;
+            color: var(--secondary);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border: 2px solid var(--primary);
+            margin-top: 20px;
+            transition: 0.3s ease;
+            box-shadow: 0 4px 12px rgba(255, 109, 0, 0.1);
+        }
+
+        .video-btn-full:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* 전문가 박스 */
+        .expert-dark {
+            background: var(--secondary);
+            color: #eceff1;
+            padding: 35px;
+            border-radius: 20px;
+            margin-top: 40px;
+        }
+
+        .expert-dark h3 { color: var(--primary); margin-top: 0; }
+
+        .footer-nav {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .btn-round {
+            background: var(--white);
+            color: var(--secondary);
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border: 1px solid #ddd;
+            transition: 0.3s;
+        }
+
+        @media (max-width: 600px) {
+            .step-block { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-banner">
+    <p>SAFETY FIRST</p>
+    <h1>전선 <span>배선 관리</span> 상세 가이드</h1>
+</div>
+
+<div class="wrapper">
+    <div class="warning-summary">
+        <h2 style="margin-top: 0;">⚡ 피복 손상의 경고</h2>
+        <p>전선의 겉면인 피복은 단순한 포장지가 아닙니다. 미세한 균열 사이로 새어 나온 전기는 화재의 씨앗이 됩니다.</p>
+        <ul style="color: #636e72;">
+            <li>손으로 만졌을 때 <b>딱딱하게 굳은</b> 전선</li>
+            <li>구리선이 희미하게라도 <b>비치는</b> 부위</li>
+            <li>전기 사용 시 특정 부분이 <b>뜨거워지는</b> 현상</li>
+        </ul>
+    </div>
+
+    <div class="timeline">
+        <div class="step-block">
+            <h3 style="margin: 0; color: var(--primary);">01 눌림 방지</h3>
+            <p>전선은 압력에 취약합니다. 가구 밑에 깔린 전선은 내부에서 서서히 타들어 갑니다.</p>
+            <div class="badge-group">
+                <span class="badge no">❌ 가구 다리 밑</span>
+                <span class="badge yes">⭕ 전선 보호관(몰딩)</span>
+            </div>
+        </div>
+
+        <div class="step-block">
+            <h3 style="margin: 0; color: var(--primary);">02 꼬임 해제</h3>
+            <p>둘둘 말린 전선은 '코일'과 같은 역할을 하여 과도한 열을 발생시킵니다.</p>
+            <div class="badge-group">
+                <span class="badge no">❌ 빵끈으로 꽉 묶기</span>
+                <span class="badge yes">⭕ 여유 있는 원형 정리</span>
+            </div>
+        </div>
+
+        <div class="step-block">
+            <h3 style="margin: 0; color: var(--primary);">03 청결 유지</h3>
+            <p>플러그와 콘센트 사이의 먼지는 공기 중의 습기를 흡수해 불꽃을 유발합니다.</p>
+            <div class="badge-group">
+                <span class="badge no">❌ 쌓인 먼지 방치</span>
+                <span class="badge yes">⭕ 마른 면봉으로 관리</span>
+            </div>
+        </div>
+
+        <div class="step-block">
+            <h3 style="margin: 0; color: var(--primary);">04 올바른 분리</h3>
+            <p>전선 줄을 당기면 내부 연결부가 미세하게 끊어져 저항이 높아집니다.</p>
+            <div class="badge-group">
+                <span class="badge no">❌ 전선 줄 당기기</span>
+                <span class="badge yes">⭕ 플러그 헤드 잡기</span>
+            </div>
+        </div>
+    </div>
+
+    <a href="00.mp4" class="video-btn-full">
+        🎬 실시간 배선 화재 위험 시뮬레이션 영상 보기
+    </a>
+
+    <div class="expert-dark">
+        <h3>💡 Expert Advice </h3>
+        <p style="margin-bottom: 0; font-size: 0.95rem;">
+            "전선에도 유통기한이 있다는 사실을 잊지 마세요. 10년이 넘은 전선은 피복 안쪽의 구리가 부식되어 전기가 흐르는 길이 좁아집니다. 인테리어를 계획 중이거나 노후 주택에 거주하신다면, 눈에 보이는 가전보다 벽면 안쪽의 <b>노후 배선 교체</b>를 최우선으로 고려해야 합니다."
+        </p>
+    </div>
+
+    <div class="footer-nav">
+        <a href="2.html" class="btn-round">← 메인 페이지로 돌아가기</a>
+    </div>
+</div>
+
+<footer style="text-align: center; color: #b2bec3; font-size: 0.8rem; padding-bottom: 40px;">
+    Wire Management System © 2026
+</footer>
+
+</body>
+</html>
